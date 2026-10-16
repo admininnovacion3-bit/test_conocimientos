@@ -1,0 +1,58 @@
+{
+  "id_plantilla": "PL-CC-01",
+  "version": 1,
+  "tipo": "completar_codigo",
+  "descripcion": "Código con UN hueco marcado [[HUECO]]; el aspirante elige el fragmento que lo completa correctamente.",
+  "area": "bases_de_datos",
+  "tema": "sql_select",
+  "nivel": 1,
+  "nota_parametros": "area, tema y nivel los fija el motor adaptativo. El hueco del código se marca [[HUECO]] (no '___') para no confundirlo con los campos que rellena la IA.",
+  "areas_permitidas": ["logica", "programacion", "bases_de_datos"],
+  "estructura": {
+    "id_plantilla": "PL-CC-01",
+    "area": "{{area}}",
+    "tema": "{{tema}}",
+    "nivel": "{{nivel}}",
+    "tipo": "completar_codigo",
+    "contenido": {
+      "enunciado": "___",
+      "lenguaje": "___",
+      "codigo": "___",
+      "opciones": { "A": "___", "B": "___", "C": "___", "D": "___" }
+    },
+    "respuesta_correcta": { "opcion": "___" },
+    "explicacion": "___"
+  },
+  "restricciones": {
+    "longitud": { "enunciado": [20, 300], "codigo": [10, 600], "opcion": [1, 80], "explicacion": [20, 400] },
+    "lenguajes_permitidos": ["python", "pseudocodigo", "sql"],
+    "lineas_codigo_por_nivel": { "1": [1, 6], "2": [2, 12], "3": [3, 20] },
+    "marcador_hueco": "[[HUECO]]",
+    "huecos_exactos": 1,
+    "num_opciones": 4,
+    "una_sola_correcta": true,
+    "tema_obligatorio": true,
+    "opciones_distintas": true,
+    "frases_prohibidas": ["todas las anteriores", "ninguna de las anteriores"],
+    "reglas_texto": [
+      "El código debe contener exactamente un [[HUECO]].",
+      "El enunciado debe describir qué debe lograr el código completo.",
+      "Solo una opción hace que el código cumpla el objetivo; las demás deben fallar o hacer otra cosa."
+    ]
+  },
+  "ejemplo_salida": {
+    "id_plantilla": "PL-CC-01",
+    "area": "bases_de_datos",
+    "tema": "sql_select",
+    "nivel": 1,
+    "tipo": "completar_codigo",
+    "contenido": {
+      "enunciado": "Complete la consulta para listar los productos con precio mayor a 50000, del más caro al más barato.",
+      "lenguaje": "sql",
+      "codigo": "SELECT nombre, precio\nFROM productos\nWHERE precio > 50000\n[[HUECO]];",
+      "opciones": { "A": "ORDER BY precio ASC", "B": "GROUP BY precio", "C": "ORDER BY precio DESC", "D": "SORT BY precio DESC" }
+    },
+    "respuesta_correcta": { "opcion": "C" },
+    "explicacion": "ORDER BY ... DESC ordena de mayor a menor. ASC haría lo contrario, GROUP BY agrupa y SORT BY no existe en SQL estándar."
+  }
+}

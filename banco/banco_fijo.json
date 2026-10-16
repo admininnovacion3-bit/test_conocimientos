@@ -1,0 +1,214 @@
+[
+  {"codigo":"BF-001","id_plantilla":"PL-OM-01","area":"logica","tema":"secuencias_patrones","nivel":1,"tipo":"opcion_multiple",
+   "contenido":{"enunciado":"¿Cuál es el siguiente término de la serie 2, 4, 8, 16, ...?","opciones":{"A":"24","B":"32","C":"20","D":"30"}},
+   "respuesta_correcta":{"opcion":"B"},"explicacion":"Cada término es el doble del anterior (potencias de 2): 16 x 2 = 32."},
+
+  {"codigo":"BF-002","id_plantilla":"PL-OM-01","area":"logica","tema":"logica_proposicional","nivel":1,"tipo":"opcion_multiple",
+   "contenido":{"enunciado":"Si la proposición p es verdadera y q es falsa, ¿cuál es el valor de (p ∧ q) ∨ ¬q?","opciones":{"A":"Verdadero","B":"Falso","C":"No se puede determinar","D":"Solo es verdadero si p es falso"}},
+   "respuesta_correcta":{"opcion":"A"},"explicacion":"p ∧ q es falso porque q es falso, pero ¬q es verdadero; una disyunción con un término verdadero es verdadera."},
+
+  {"codigo":"BF-003","id_plantilla":"PL-OM-01","area":"logica","tema":"conjuntos","nivel":1,"tipo":"opcion_multiple",
+   "contenido":{"enunciado":"Dados los conjuntos A = {1, 2, 3, 4} y B = {3, 4, 5}, ¿cuál es la intersección A ∩ B?","opciones":{"A":"{1, 2, 3, 4, 5}","B":"{3, 4}","C":"{1, 2}","D":"{5}"}},
+   "respuesta_correcta":{"opcion":"B"},"explicacion":"La intersección contiene solo los elementos que están en ambos conjuntos: 3 y 4. La opción A es la unión."},
+
+  {"codigo":"BF-004","id_plantilla":"PL-CS-01","area":"logica","tema":"algoritmos_pseudocodigo","nivel":1,"tipo":"codigo_salida",
+   "contenido":{"enunciado":"¿Qué muestra el siguiente pseudocódigo?","lenguaje":"pseudocodigo","codigo":"x <- 5\ny <- 3\nx <- x + y\ny <- x - y\nESCRIBIR x, y","opciones":{"A":"8, 3","B":"8, 5","C":"5, 3","D":"8, 8"}},
+   "respuesta_correcta":{"opcion":"B"},"explicacion":"x pasa a 8; luego y = 8 - 3 = 5. Las instrucciones se ejecutan en orden y cada asignación usa el valor más reciente."},
+
+  {"codigo":"BF-005","id_plantilla":"PL-VF-01","area":"logica","tema":"razonamiento_deductivo","nivel":2,"tipo":"verdadero_falso_justificado",
+   "contenido":{"afirmacion":"Premisas: todos los practicantes saben Git; algunos que saben Git saben Docker. Se concluye que algunos practicantes saben Docker.",
+     "opciones_justificacion":{"A":"Falso: quienes saben Docker podrían ser personas que saben Git pero no son practicantes; la conclusión no se deduce.","B":"Verdadero: si todos los practicantes saben Git, comparten todas las características de quienes saben Git.","C":"Falso: porque de las premisas se deduce que ningún practicante sabe Docker."}},
+   "respuesta_correcta":{"valor":false,"justificacion":"A"},"explicacion":"Es una falacia: 'algunos que saben Git' no tiene por qué incluir practicantes. Las premisas no garantizan la conclusión."},
+
+  {"codigo":"BF-006","id_plantilla":"PL-OM-01","area":"logica","tema":"logica_proposicional","nivel":2,"tipo":"opcion_multiple",
+   "contenido":{"enunciado":"¿Cuál es la negación correcta de la proposición 'todos los servidores están activos'?","opciones":{"A":"Ningún servidor está activo","B":"Al menos un servidor no está activo","C":"Todos los servidores están inactivos","D":"Algunos servidores están activos"}},
+   "respuesta_correcta":{"opcion":"B"},"explicacion":"La negación de 'para todo x, P(x)' es 'existe un x tal que no P(x)': basta un servidor inactivo."},
+
+  {"codigo":"BF-007","id_plantilla":"PL-CC-01","area":"logica","tema":"algoritmos_pseudocodigo","nivel":2,"tipo":"completar_codigo",
+   "contenido":{"enunciado":"Complete el algoritmo para que calcule la suma de los números de 1 hasta n.","lenguaje":"pseudocodigo","codigo":"suma <- 0\ni <- 1\nMIENTRAS i <= n HACER\n    suma <- suma + i\n    [[HUECO]]\nFIN MIENTRAS","opciones":{"A":"i <- i + 1","B":"suma <- suma + 1","C":"i <- i - 1","D":"n <- n + 1"}},
+   "respuesta_correcta":{"opcion":"A"},"explicacion":"El contador i debe avanzar en cada vuelta; de lo contrario el ciclo nunca termina (C y D) o no se suma lo pedido (B)."},
+
+  {"codigo":"BF-008","id_plantilla":"PL-CS-01","area":"logica","tema":"secuencias_patrones","nivel":2,"tipo":"codigo_salida",
+   "contenido":{"enunciado":"El siguiente código genera una secuencia conocida. ¿Qué imprime?","lenguaje":"python","codigo":"a, b = 0, 1\nfor _ in range(6):\n    a, b = b, a + b\nprint(a)","opciones":{"A":"13","B":"5","C":"8","D":"21"}},
+   "respuesta_correcta":{"opcion":"C"},"explicacion":"Es Fibonacci: tras 6 iteraciones a toma los valores 1, 1, 2, 3, 5, 8."},
+
+  {"codigo":"BF-009","id_plantilla":"PL-OM-01","area":"logica","tema":"razonamiento_deductivo","nivel":3,"tipo":"opcion_multiple",
+   "contenido":{"enunciado":"Premisas: (1) Si el despliegue falla, se activa la alerta. (2) La alerta no se activó. ¿Qué conclusión es válida?","opciones":{"A":"El despliegue no falló","B":"El despliegue falló","C":"No se puede concluir nada","D":"La alerta está dañada"}},
+   "respuesta_correcta":{"opcion":"A"},"explicacion":"Es modus tollens: si P implica Q y Q es falso, entonces P es falso."},
+
+  {"codigo":"BF-010","id_plantilla":"PL-VF-01","area":"logica","tema":"logica_proposicional","nivel":3,"tipo":"verdadero_falso_justificado",
+   "contenido":{"afirmacion":"La proposición p → q es lógicamente equivalente a ¬q → ¬p.",
+     "opciones_justificacion":{"A":"Verdadero: es la contrapositiva; ambas son falsas únicamente cuando p es verdadero y q es falso.","B":"Verdadero: porque la implicación es conmutativa y p → q equivale a q → p.","C":"Falso: la equivalente es ¬p → ¬q, que es la inversa de la implicación."}},
+   "respuesta_correcta":{"valor":true,"justificacion":"A"},"explicacion":"La contrapositiva conserva la tabla de verdad. La recíproca (q → p) y la inversa (¬p → ¬q) no son equivalentes."},
+
+  {"codigo":"BF-011","id_plantilla":"PL-CS-01","area":"logica","tema":"algoritmos_pseudocodigo","nivel":3,"tipo":"codigo_salida",
+   "contenido":{"enunciado":"¿Qué imprime este algoritmo implementado en Python?","lenguaje":"python","codigo":"def misterio(n):\n    pasos = 0\n    while n != 1:\n        if n % 2 == 0:\n            n = n // 2\n        else:\n            n = 3 * n + 1\n        pasos += 1\n    return pasos\n\nprint(misterio(6))","opciones":{"A":"8","B":"6","C":"9","D":"7"}},
+   "respuesta_correcta":{"opcion":"A"},"explicacion":"La secuencia es 6, 3, 10, 5, 16, 8, 4, 2, 1: ocho pasos hasta llegar a 1."},
+
+  {"codigo":"BF-012","id_plantilla":"PL-OM-01","area":"logica","tema":"conjuntos","nivel":2,"tipo":"opcion_multiple",
+   "contenido":{"enunciado":"Usando unión de conjuntos: en un grupo de 40 aspirantes, 25 saben Python, 18 saben SQL y 10 saben ambos. ¿Cuántos no saben ninguno de los dos?","opciones":{"A":"7","B":"3","C":"17","D":"13"}},
+   "respuesta_correcta":{"opcion":"A"},"explicacion":"|Python ∪ SQL| = 25 + 18 - 10 = 33; los que no saben ninguno son 40 - 33 = 7."},
+
+  {"codigo":"BF-013","id_plantilla":"PL-OM-01","area":"programacion","tema":"variables_tipos","nivel":1,"tipo":"opcion_multiple",
+   "contenido":{"enunciado":"En Python 3, ¿qué tipo de dato retorna la expresión type(3 / 2)?","opciones":{"A":"int","B":"float","C":"str","D":"bool"}},
+   "respuesta_correcta":{"opcion":"B"},"explicacion":"En Python 3 el operador / siempre produce un float (1.5). La división entera es //."},
+
+  {"codigo":"BF-014","id_plantilla":"PL-CS-01","area":"programacion","tema":"variables_tipos","nivel":1,"tipo":"codigo_salida",
+   "contenido":{"enunciado":"Observe el tipo de cada variable. ¿Qué imprime el código?","lenguaje":"python","codigo":"x = \"5\"\ny = 2\nprint(x * y)","opciones":{"A":"10","B":"55","C":"Error de tipos","D":"7"}},
+   "respuesta_correcta":{"opcion":"B"},"explicacion":"x es una cadena; multiplicar una cadena por un entero la repite: '5' * 2 = '55'."},
+
+  {"codigo":"BF-015","id_plantilla":"PL-CS-01","area":"programacion","tema":"condicionales","nivel":2,"tipo":"codigo_salida",
+   "contenido":{"enunciado":"¿Qué imprime el siguiente código?","lenguaje":"python","codigo":"nota = 3.0\nif nota >= 4.0:\n    print(\"Excelente\")\nelif nota >= 3.0:\n    print(\"Aprobado\")\nelse:\n    print(\"Reprobado\")","opciones":{"A":"Excelente","B":"Aprobado","C":"Reprobado","D":"No imprime nada"}},
+   "respuesta_correcta":{"opcion":"B"},"explicacion":"La primera condición es falsa y la del elif es verdadera (3.0 >= 3.0); solo se ejecuta ese bloque."},
+
+  {"codigo":"BF-016","id_plantilla":"PL-OM-01","area":"programacion","tema":"ciclos","nivel":1,"tipo":"opcion_multiple",
+   "contenido":{"enunciado":"¿Cuál ciclo imprime los números del 10 al 1 en orden descendente?","opciones":{"A":"for i in range(10, 0, -1): print(i)","B":"for i in range(10, 1): print(i)","C":"for i in range(1, 10, -1): print(i)","D":"for i in range(10, -1, -1): print(i)"}},
+   "respuesta_correcta":{"opcion":"A"},"explicacion":"range(10, 0, -1) va de 10 hasta 1 (el 0 se excluye). D incluye el 0; B y C no generan ningún valor."},
+
+  {"codigo":"BF-017","id_plantilla":"PL-CC-01","area":"programacion","tema":"funciones","nivel":1,"tipo":"completar_codigo",
+   "contenido":{"enunciado":"Complete la función para que retorne el área de un rectángulo.","lenguaje":"python","codigo":"def area_rectangulo(base, altura):\n    [[HUECO]]\n\nprint(area_rectangulo(4, 5))  # debe imprimir 20","opciones":{"A":"print(base * altura)","B":"return base * altura","C":"return base + altura","D":"base * altura"}},
+   "respuesta_correcta":{"opcion":"B"},"explicacion":"Una función entrega su resultado con return. Con print (A) o sin return (D) la función retorna None."},
+
+  {"codigo":"BF-018","id_plantilla":"PL-CS-01","area":"programacion","tema":"listas_estructuras","nivel":2,"tipo":"codigo_salida",
+   "contenido":{"enunciado":"¿Qué imprime el siguiente código sobre listas?","lenguaje":"python","codigo":"a = [1, 2, 3]\nb = a\nb.append(4)\nprint(len(a))","opciones":{"A":"3","B":"4","C":"Error","D":"7"}},
+   "respuesta_correcta":{"opcion":"B"},"explicacion":"b = a no copia la lista: ambas variables apuntan al mismo objeto, por lo que append también afecta a a."},
+
+  {"codigo":"BF-019","id_plantilla":"PL-CS-01","area":"programacion","tema":"funciones","nivel":2,"tipo":"codigo_salida",
+   "contenido":{"enunciado":"¿Qué imprime el código? Fíjese en el parámetro por defecto.","lenguaje":"python","codigo":"def f(x, y=2):\n    return x ** y\n\nprint(f(3) + f(2, 3))","opciones":{"A":"17","B":"15","C":"13","D":"12"}},
+   "respuesta_correcta":{"opcion":"A"},"explicacion":"f(3) usa y=2: 3**2 = 9. f(2, 3) = 2**3 = 8. La suma es 17."},
+
+  {"codigo":"BF-020","id_plantilla":"PL-CC-01","area":"programacion","tema":"listas_estructuras","nivel":2,"tipo":"completar_codigo",
+   "contenido":{"enunciado":"Complete el ciclo para recorrer el diccionario obteniendo cada producto con su cantidad.","lenguaje":"python","codigo":"inventario = {\"teclado\": 5, \"mouse\": 8}\nfor producto, cantidad in [[HUECO]]:\n    print(producto, cantidad)","opciones":{"A":"inventario.items()","B":"inventario.keys()","C":"inventario","D":"inventario.values()"}},
+   "respuesta_correcta":{"opcion":"A"},"explicacion":"items() devuelve pares (clave, valor) que se desempaquetan en dos variables; keys() y values() solo entregan una parte."},
+
+  {"codigo":"BF-021","id_plantilla":"PL-OM-01","area":"programacion","tema":"poo","nivel":2,"tipo":"opcion_multiple",
+   "contenido":{"enunciado":"En programación orientada a objetos con Python, ¿qué representa self dentro de un método de una clase?","opciones":{"A":"La clase misma","B":"La instancia (objeto) sobre la que se invoca el método","C":"Una variable global del módulo","D":"El método de la clase padre"}},
+   "respuesta_correcta":{"opcion":"B"},"explicacion":"self es la referencia al objeto concreto que recibe la llamada; permite acceder a sus atributos."},
+
+  {"codigo":"BF-022","id_plantilla":"PL-CS-01","area":"programacion","tema":"poo","nivel":2,"tipo":"codigo_salida",
+   "contenido":{"enunciado":"¿Qué imprime el siguiente código con una clase?","lenguaje":"python","codigo":"class Contador:\n    def __init__(self):\n        self.valor = 0\n\n    def sumar(self):\n        self.valor += 1\n        return self\n\nc = Contador()\nc.sumar().sumar().sumar()\nprint(c.valor)","opciones":{"A":"1","B":"3","C":"0","D":"Error"}},
+   "respuesta_correcta":{"opcion":"B"},"explicacion":"sumar retorna el mismo objeto, por eso las llamadas se encadenan y el atributo valor se incrementa tres veces."},
+
+  {"codigo":"BF-023","id_plantilla":"PL-VF-01","area":"programacion","tema":"variables_tipos","nivel":2,"tipo":"verdadero_falso_justificado",
+   "contenido":{"afirmacion":"En Python, la expresión 0 or 'hola' produce el valor booleano True.",
+     "opciones_justificacion":{"A":"Falso: or retorna el primer operando que sea verdadero, en este caso la cadena 'hola', no el booleano True.","B":"Verdadero: el operador or siempre retorna un valor booleano.","C":"Falso: la expresión lanza un error porque mezcla un entero con una cadena."}},
+   "respuesta_correcta":{"valor":false,"justificacion":"A"},"explicacion":"and y or en Python retornan uno de sus operandos (evaluación en cortocircuito), no necesariamente True o False."},
+
+  {"codigo":"BF-024","id_plantilla":"PL-CS-01","area":"programacion","tema":"recursion","nivel":3,"tipo":"codigo_salida",
+   "contenido":{"enunciado":"La siguiente función es recursiva. ¿Qué imprime?","lenguaje":"python","codigo":"def suma_digitos(n):\n    if n < 10:\n        return n\n    return n % 10 + suma_digitos(n // 10)\n\nprint(suma_digitos(4072))","opciones":{"A":"13","B":"4072","C":"11","D":"7"}},
+   "respuesta_correcta":{"opcion":"A"},"explicacion":"Separa el último dígito (n % 10) y se llama con el resto (n // 10): 2 + 7 + 0 + 4 = 13."},
+
+  {"codigo":"BF-025","id_plantilla":"PL-CS-01","area":"programacion","tema":"listas_estructuras","nivel":3,"tipo":"codigo_salida",
+   "contenido":{"enunciado":"¿Qué imprime este código que usa comprensión de listas?","lenguaje":"python","codigo":"matriz = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]\nresultado = [fila[i] for i, fila in enumerate(matriz)]\nprint(sum(resultado))","opciones":{"A":"15","B":"12","C":"45","D":"6"}},
+   "respuesta_correcta":{"opcion":"A"},"explicacion":"Toma el elemento i de la fila i: la diagonal principal 1, 5 y 9, que suma 15."},
+
+  {"codigo":"BF-026","id_plantilla":"PL-CC-01","area":"programacion","tema":"recursion","nivel":3,"tipo":"completar_codigo",
+   "contenido":{"enunciado":"Complete el caso base para que la función factorial funcione con cualquier n >= 0, incluido el 0.","lenguaje":"python","codigo":"def factorial(n):\n    if [[HUECO]]:\n        return 1\n    return n * factorial(n - 1)","opciones":{"A":"n == 0","B":"n == 1","C":"n > 0","D":"n < 0"}},
+   "respuesta_correcta":{"opcion":"A"},"explicacion":"Con n == 0 se cubre 0! = 1. Con n == 1, factorial(0) nunca alcanza el caso base y la recursión no termina."},
+
+  {"codigo":"BF-027","id_plantilla":"PL-OM-01","area":"programacion","tema":"poo","nivel":3,"tipo":"opcion_multiple",
+   "contenido":{"enunciado":"¿Qué concepto de POO se aplica cuando una clase hija redefine un método heredado para que se comporte distinto?","opciones":{"A":"Encapsulamiento","B":"Sobrescritura de métodos (polimorfismo)","C":"Abstracción de datos","D":"Composición"}},
+   "respuesta_correcta":{"opcion":"B"},"explicacion":"Sobrescribir (override) un método heredado permite que objetos de distintas clases respondan distinto al mismo mensaje: polimorfismo."},
+
+  {"codigo":"BF-028","id_plantilla":"PL-VF-01","area":"programacion","tema":"funciones","nivel":3,"tipo":"verdadero_falso_justificado",
+   "contenido":{"afirmacion":"En Python, usar una lista vacía como valor por defecto de un parámetro (def f(x=[])) crea una lista nueva en cada llamada a la función.",
+     "opciones_justificacion":{"A":"Falso: el valor por defecto se evalúa una sola vez al definir la función, así que la misma lista se comparte entre llamadas.","B":"Verdadero: Python copia los parámetros por defecto antes de cada llamada.","C":"Falso: Python no permite usar listas como valor por defecto de un parámetro."}},
+   "respuesta_correcta":{"valor":false,"justificacion":"A"},"explicacion":"Es un error clásico: se recomienda usar x=None y crear la lista dentro de la función."},
+
+  {"codigo":"BF-029","id_plantilla":"PL-OM-01","area":"bases_de_datos","tema":"modelo_relacional","nivel":1,"tipo":"opcion_multiple",
+   "contenido":{"enunciado":"En el modelo relacional, ¿qué representa una fila de una tabla?","opciones":{"A":"Un atributo de la entidad","B":"Un registro, es decir, una instancia de la entidad","C":"El tipo de dato de una columna","D":"Una relación entre dos tablas"}},
+   "respuesta_correcta":{"opcion":"B"},"explicacion":"Cada fila (tupla) es un registro concreto; las columnas son los atributos."},
+
+  {"codigo":"BF-030","id_plantilla":"PL-OM-01","area":"bases_de_datos","tema":"claves","nivel":1,"tipo":"opcion_multiple",
+   "contenido":{"enunciado":"¿Cuál es la función principal de una clave primaria en una tabla?","opciones":{"A":"Identificar de forma única cada registro","B":"Acelerar todas las consultas de la base","C":"Relacionar la tabla con otra tabla","D":"Cifrar los datos sensibles"}},
+   "respuesta_correcta":{"opcion":"A"},"explicacion":"La clave primaria garantiza unicidad y no nulidad. Relacionar tablas es tarea de la clave foránea."},
+
+  {"codigo":"BF-031","id_plantilla":"PL-CC-01","area":"bases_de_datos","tema":"sql_select","nivel":1,"tipo":"completar_codigo",
+   "contenido":{"enunciado":"Complete la consulta para listar solo los aspirantes de quinto semestre.","lenguaje":"sql","codigo":"SELECT nombre, correo\nFROM aspirantes\n[[HUECO]] semestre = 5;","opciones":{"A":"WHERE","B":"HAVING","C":"WHEN","D":"IF"}},
+   "respuesta_correcta":{"opcion":"A"},"explicacion":"WHERE filtra filas según una condición. HAVING filtra grupos; WHEN e IF no son cláusulas de SELECT."},
+
+  {"codigo":"BF-032","id_plantilla":"PL-CS-01","area":"bases_de_datos","tema":"sql_select","nivel":1,"tipo":"codigo_salida",
+   "contenido":{"enunciado":"La tabla cursos(id, nombre, creditos) tiene las filas (1,'Lógica',3), (2,'Redes',4) y (3,'Bases',4). ¿Cuántas filas retorna la consulta?","lenguaje":"sql","codigo":"SELECT nombre\nFROM cursos\nWHERE creditos >= 4;","opciones":{"A":"1","B":"2","C":"3","D":"0"}},
+   "respuesta_correcta":{"opcion":"B"},"explicacion":"Solo 'Redes' y 'Bases' tienen 4 créditos o más; >= incluye el 4."},
+
+  {"codigo":"BF-033","id_plantilla":"PL-VF-01","area":"bases_de_datos","tema":"claves","nivel":1,"tipo":"verdadero_falso_justificado",
+   "contenido":{"afirmacion":"Una clave foránea puede contener valores repetidos dentro de su propia tabla.",
+     "opciones_justificacion":{"A":"Verdadero: varios registros pueden referenciar al mismo registro padre, por ejemplo muchos pedidos de un mismo cliente.","B":"Falso: toda clave, primaria o foránea, es única por definición.","C":"Verdadero: porque la base de datos no valida las claves foráneas."}},
+   "respuesta_correcta":{"valor":true,"justificacion":"A"},"explicacion":"La clave foránea modela relaciones uno a muchos; lo que se exige es que el valor exista en la tabla referenciada."},
+
+  {"codigo":"BF-034","id_plantilla":"PL-CS-01","area":"bases_de_datos","tema":"sql_agregacion","nivel":2,"tipo":"codigo_salida",
+   "contenido":{"enunciado":"La tabla ventas(producto, monto) tiene las filas ('A',100), ('B',50), ('A',30), ('C',70), ('B',20). ¿Cuántas filas devuelve la consulta?","lenguaje":"sql","codigo":"SELECT producto, SUM(monto)\nFROM ventas\nGROUP BY producto\nHAVING SUM(monto) > 70;","opciones":{"A":"1","B":"2","C":"3","D":"5"}},
+   "respuesta_correcta":{"opcion":"A"},"explicacion":"Las sumas son A=130, B=70 y C=70. Solo A supera 70 (la condición es estrictamente mayor)."},
+
+  {"codigo":"BF-035","id_plantilla":"PL-CC-01","area":"bases_de_datos","tema":"sql_join","nivel":2,"tipo":"completar_codigo",
+   "contenido":{"enunciado":"Complete la consulta para listar TODOS los estudiantes, incluso los que no tienen programa asignado.","lenguaje":"sql","codigo":"SELECT e.nombre, p.nombre AS programa\nFROM estudiantes e\n[[HUECO]] programas p ON e.programa_id = p.id;","opciones":{"A":"INNER JOIN","B":"LEFT JOIN","C":"RIGHT JOIN","D":"CROSS JOIN"}},
+   "respuesta_correcta":{"opcion":"B"},"explicacion":"LEFT JOIN conserva todas las filas de la tabla izquierda (estudiantes) y pone NULL donde no hay programa."},
+
+  {"codigo":"BF-036","id_plantilla":"PL-OM-01","area":"bases_de_datos","tema":"normalizacion","nivel":2,"tipo":"opcion_multiple",
+   "contenido":{"enunciado":"Una tabla pedidos(pedido_id PK, cliente_id, nombre_cliente, fecha) guarda nombre_cliente, que depende de cliente_id y no directamente de pedido_id. ¿Qué forma normal se viola?","opciones":{"A":"Primera forma normal (1FN)","B":"Segunda forma normal (2FN)","C":"Tercera forma normal (3FN)","D":"No viola ninguna"}},
+   "respuesta_correcta":{"opcion":"C"},"explicacion":"Hay una dependencia transitiva (pedido_id → cliente_id → nombre_cliente), lo que viola 3FN. 2FN no aplica porque la clave es simple."},
+
+  {"codigo":"BF-037","id_plantilla":"PL-OM-01","area":"bases_de_datos","tema":"sql_agregacion","nivel":2,"tipo":"opcion_multiple",
+   "contenido":{"enunciado":"¿Qué diferencia hay entre COUNT(*) y COUNT(telefono) en una consulta SQL?","opciones":{"A":"Ninguna, son equivalentes","B":"COUNT(telefono) no cuenta las filas donde telefono es NULL","C":"COUNT(*) ignora las filas que tienen algún NULL","D":"COUNT(telefono) solo cuenta valores distintos"}},
+   "respuesta_correcta":{"opcion":"B"},"explicacion":"COUNT(*) cuenta todas las filas; COUNT(columna) ignora los NULL. Para valores distintos se usa COUNT(DISTINCT columna)."},
+
+  {"codigo":"BF-038","id_plantilla":"PL-VF-01","area":"bases_de_datos","tema":"normalizacion","nivel":2,"tipo":"verdadero_falso_justificado",
+   "contenido":{"afirmacion":"Normalizar una base de datos hasta la tercera forma normal (3FN) reduce la redundancia de datos.",
+     "opciones_justificacion":{"A":"Verdadero: separa los datos en tablas según sus dependencias, de modo que cada hecho se almacena una sola vez.","B":"Verdadero: porque elimina la necesidad de usar claves foráneas.","C":"Falso: la normalización solo sirve para mejorar la velocidad de lectura."}},
+   "respuesta_correcta":{"valor":true,"justificacion":"A"},"explicacion":"La normalización elimina redundancias y anomalías de actualización; de hecho aumenta el uso de claves foráneas."},
+
+  {"codigo":"BF-039","id_plantilla":"PL-CS-01","area":"bases_de_datos","tema":"sql_join","nivel":3,"tipo":"codigo_salida",
+   "contenido":{"enunciado":"Tablas: docentes(id, nombre) con (1,'D1'), (2,'D2'), (3,'D3'); cursos(id, docente_id) con (10,1), (11,1), (12,2). ¿Cuántas filas devuelve la consulta?","lenguaje":"sql","codigo":"SELECT d.nombre, COUNT(c.id)\nFROM docentes d\nLEFT JOIN cursos c ON c.docente_id = d.id\nGROUP BY d.nombre;","opciones":{"A":"2","B":"3","C":"4","D":"6"}},
+   "respuesta_correcta":{"opcion":"B"},"explicacion":"El LEFT JOIN conserva a D3 aunque no tenga cursos; al agrupar por docente queda una fila por cada uno: D1=2, D2=1, D3=0."},
+
+  {"codigo":"BF-040","id_plantilla":"PL-CC-01","area":"bases_de_datos","tema":"sql_agregacion","nivel":3,"tipo":"completar_codigo",
+   "contenido":{"enunciado":"Complete para mostrar solo los programas cuya media sea superior a 4.0, ordenados de mayor a menor media.","lenguaje":"sql","codigo":"SELECT programa, AVG(promedio) AS media\nFROM estudiantes\nWHERE semestre >= 3\nGROUP BY programa\n[[HUECO]];","opciones":{"A":"HAVING AVG(promedio) > 4.0 ORDER BY media DESC","B":"WHERE AVG(promedio) > 4.0 ORDER BY media DESC","C":"HAVING AVG(promedio) > 4.0 ORDER BY media ASC","D":"ORDER BY media DESC HAVING AVG(promedio) > 4.0"}},
+   "respuesta_correcta":{"opcion":"A"},"explicacion":"El filtro sobre un agregado va en HAVING, y ORDER BY siempre va al final. B usa WHERE con agregado, C ordena al revés y D invierte el orden de las cláusulas."},
+
+  {"codigo":"BF-041","id_plantilla":"PL-CP-01","area":"actitud","tema":"trabajo_equipo","nivel":1,"tipo":"caso_practico",
+   "contenido":{"contexto":"Su equipo de tres practicantes debe entregar un prototipo en dos semanas. Un compañero casi no ha aportado y el resto del grupo está molesto.","enunciado":"¿Qué es lo más adecuado hacer?",
+     "opciones":{"A":"Hacer su parte y también la del compañero, sin decir nada.","B":"Hablar en privado con el compañero, preguntar qué le impide avanzar y acordar tareas concretas.","C":"Quejarse de inmediato con el jefe del área sin hablar antes con el compañero.","D":"Sacarlo del grupo de mensajes del proyecto para que entienda."}},
+   "respuesta_correcta":{"opcion":"B"},"explicacion":"Abordar el conflicto directamente y con respeto, buscando la causa y acuerdos concretos, es la base del trabajo en equipo."},
+
+  {"codigo":"BF-042","id_plantilla":"PL-CP-01","area":"actitud","tema":"etica_profesional","nivel":2,"tipo":"caso_practico",
+   "contenido":{"contexto":"Mientras corrige un error en el sistema académico, nota que tiene acceso a calificaciones y datos personales de estudiantes, aunque su tarea no lo requiere. Un compañero le pide consultar la nota de un amigo.","enunciado":"¿Qué hace usted?",
+     "opciones":{"A":"Consultar la nota solo esta vez, ya que no va a modificar nada.","B":"Negarse, explicar que esos datos son confidenciales y reportar al líder que su acceso es mayor al necesario.","C":"Prestarle sus credenciales para que él mismo la consulte.","D":"Ignorar la petición y no mencionar el acceso excesivo a nadie."}},
+   "respuesta_correcta":{"opcion":"B"},"explicacion":"Proteger la privacidad de los datos y reportar permisos excesivos (principio de mínimo privilegio) es la conducta ética esperada."},
+
+  {"codigo":"BF-043","id_plantilla":"PL-OM-01","area":"actitud","tema":"comunicacion","nivel":1,"tipo":"opcion_multiple",
+   "contenido":{"enunciado":"Debe explicar a un usuario administrativo, sin formación técnica, por qué el sistema estuvo caído. ¿Qué es lo más adecuado?","opciones":{"A":"Usar términos técnicos precisos para demostrar dominio del tema","B":"Explicar con lenguaje sencillo qué pasó, cómo le afectó y qué se hizo","C":"Decirle que es un tema técnico que no va a entender","D":"Enviarle por correo el log completo del servidor"}},
+   "respuesta_correcta":{"opcion":"B"},"explicacion":"Comunicar es adaptar el mensaje al receptor: claridad, impacto y acciones tomadas."},
+
+  {"codigo":"BF-044","id_plantilla":"PL-VF-01","area":"actitud","tema":"aprendizaje_autonomo","nivel":1,"tipo":"verdadero_falso_justificado",
+   "contenido":{"afirmacion":"Cuando se desconoce una tecnología, lo más profesional es esperar una capacitación formal antes de empezar a usarla.",
+     "opciones_justificacion":{"A":"Falso: se espera iniciativa para investigar en la documentación oficial y hacer pruebas, pidiendo apoyo cuando haga falta.","B":"Verdadero: usar una tecnología sin capacitación formal siempre genera errores graves.","C":"Falso: porque las capacitaciones formales nunca resultan útiles."}},
+   "respuesta_correcta":{"valor":false,"justificacion":"A"},"explicacion":"En innovación las tecnologías cambian rápido; el aprendizaje autónomo con fuentes confiables es una competencia clave."},
+
+  {"codigo":"BF-045","id_plantilla":"PL-CP-01","area":"actitud","tema":"manejo_presion","nivel":2,"tipo":"caso_practico",
+   "contenido":{"contexto":"Bajo presión de tiempo, faltan dos horas para una demostración ante directivos y usted descubre un error que hace fallar una función secundaria del prototipo.","enunciado":"¿Qué hace usted en esta situación?",
+     "opciones":{"A":"Intentar reescribir todo el módulo antes de la demostración.","B":"Ocultar temporalmente la función, preparar la demo con lo estable y avisar al líder del error y del plan para corregirlo.","C":"Cancelar la demostración sin consultar a nadie.","D":"Presentar sin decir nada y esperar que nadie use esa función."}},
+   "respuesta_correcta":{"opcion":"B"},"explicacion":"Bajo presión se prioriza lo estable, se reduce el riesgo y se comunica con transparencia."},
+
+  {"codigo":"BF-046","id_plantilla":"PL-OM-01","area":"actitud","tema":"aprendizaje_autonomo","nivel":2,"tipo":"opcion_multiple",
+   "contenido":{"enunciado":"Tras investigar durante dos horas, no logra resolver un error de configuración. ¿Qué hace?","opciones":{"A":"Seguir solo hasta resolverlo, sin importar cuánto tarde","B":"Documentar lo que ya intentó y pedir ayuda al equipo con una pregunta concreta","C":"Abandonar la tarea y pasar a otra sin avisar","D":"Copiar la configuración de otro proyecto sin entenderla"}},
+   "respuesta_correcta":{"opcion":"B"},"explicacion":"Saber cuándo pedir ayuda, mostrando lo ya intentado, ahorra tiempo al equipo y demuestra autonomía responsable."},
+
+  {"codigo":"BF-047","id_plantilla":"PL-CP-01","area":"actitud","tema":"etica_profesional","nivel":3,"tipo":"caso_practico",
+   "contenido":{"contexto":"Para terminar a tiempo, encuentra en un repositorio público una librería que resuelve exactamente lo que necesita, pero su licencia prohíbe el uso comercial y el sistema se ofrecerá a otras instituciones.","enunciado":"¿Cuál es la decisión correcta?",
+     "opciones":{"A":"Usarla y cambiar los nombres de las funciones para que no se note.","B":"Usarla temporalmente y reemplazarla cuando haya tiempo.","C":"Informar al líder la restricción de la licencia y proponer alternativas con licencia compatible (MIT, Apache) o desarrollo propio.","D":"Usarla, porque si está publicada cualquiera puede usarla."}},
+   "respuesta_correcta":{"opcion":"C"},"explicacion":"Que un código sea público no significa que su uso sea libre; respetar licencias es una obligación legal y ética."},
+
+  {"codigo":"BF-048","id_plantilla":"PL-VF-01","area":"actitud","tema":"trabajo_equipo","nivel":2,"tipo":"verdadero_falso_justificado",
+   "contenido":{"afirmacion":"En una revisión de código (code review), señalar errores en el código de un compañero es una falta de respeto hacia su trabajo.",
+     "opciones_justificacion":{"A":"Falso: la revisión busca mejorar la calidad del producto; hecha con respeto y argumentos es una práctica colaborativa.","B":"Verdadero: cada desarrollador es el único responsable de su propio código.","C":"Falso: porque en la revisión solo se revisa el estilo, nunca la lógica."}},
+   "respuesta_correcta":{"valor":false,"justificacion":"A"},"explicacion":"La revisión de código es una práctica estándar de equipos profesionales para compartir conocimiento y detectar errores temprano."},
+
+  {"codigo":"BF-049","id_plantilla":"PL-CP-01","area":"actitud","tema":"comunicacion","nivel":3,"tipo":"caso_practico",
+   "contenido":{"contexto":"Un cliente interno pide agregar una funcionalidad 'pequeña' a una semana de la entrega. Usted estima que tomaría tres días y pondría en riesgo las pruebas.","enunciado":"¿Cómo responde?",
+     "opciones":{"A":"Aceptar sin comentar nada para mantener la buena relación con el cliente.","B":"Rechazar la solicitud de forma tajante.","C":"Explicar al cliente el impacto en tiempo y riesgo, y proponer con el líder incluirla en una versión siguiente o cambiarla por otra prioridad.","D":"Implementarla trabajando de noche y sin pruebas."}},
+   "respuesta_correcta":{"opcion":"C"},"explicacion":"Gestionar el alcance implica comunicar impacto con datos y negociar alternativas, sin comprometer la calidad."},
+
+  {"codigo":"BF-050","id_plantilla":"PL-OM-01","area":"actitud","tema":"manejo_presion","nivel":3,"tipo":"opcion_multiple",
+   "contenido":{"enunciado":"Según su prioridad, ordene estas tareas: (1) un error que impide a todos los usuarios ingresar al sistema, (2) un reporte solicitado para la próxima semana, (3) mejorar el diseño de un botón.","opciones":{"A":"1, 2, 3","B":"3, 2, 1","C":"2, 1, 3","D":"1, 3, 2"}},
+   "respuesta_correcta":{"opcion":"A"},"explicacion":"Primero lo urgente e importante (bloquea a todos), luego lo importante con fecha y al final lo cosmético."}
+]

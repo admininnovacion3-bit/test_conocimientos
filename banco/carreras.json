@@ -1,0 +1,34 @@
+[
+  {
+    "id": "ingenieria_sistemas",
+    "nombre": "Ingeniería de Sistemas",
+    "descripcion": "Perfil equilibrado: lógica, programación, bases de datos y actitud.",
+    "palabras_clave": ["sistemas", "informatica", "computacion", "ingenieria de sistemas"],
+    "pesos_area": { "logica": 4, "programacion": 4, "bases_de_datos": 4, "actitud": 3 },
+    "semillas": ["SEM-01", "SEM-02", "SEM-03", "SEM-04", "SEM-05"]
+  },
+  {
+    "id": "ingenieria_software",
+    "nombre": "Ingeniería de Software",
+    "descripcion": "Mayor énfasis en programación y diseño orientado a objetos.",
+    "palabras_clave": ["ingenieria de software", "ing software", "ingenieria software", "software"],
+    "pesos_area": { "logica": 3, "programacion": 6, "bases_de_datos": 3, "actitud": 3 },
+    "semillas": ["SEM-06", "SEM-02", "SEM-07", "SEM-04", "SEM-05"]
+  },
+  {
+    "id": "tecnologia_desarrollo",
+    "nombre": "Tecnología en Desarrollo de Software",
+    "descripcion": "Programas tecnológicos: fundamentos prácticos de programación y SQL.",
+    "palabras_clave": ["tecnologia", "tecnologo", "tecnico", "adsi", "analisis y desarrollo", "sena", "desarrollo de software"],
+    "pesos_area": { "logica": 4, "programacion": 5, "bases_de_datos": 3, "actitud": 3 },
+    "semillas": ["SEM-01", "SEM-08", "SEM-09", "SEM-02", "SEM-05"]
+  },
+  {
+    "id": "otra_afin",
+    "nombre": "Otra carrera afín",
+    "descripcion": "Electrónica, telecomunicaciones, industrial, matemáticas u otras: énfasis en lógica.",
+    "palabras_clave": ["electronica", "telecomunicaciones", "industrial", "matematicas", "redes", "mecatronica", "fisica"],
+    "pesos_area": { "logica": 5, "programacion": 4, "bases_de_datos": 3, "actitud": 3 },
+    "semillas": ["SEM-01", "SEM-08", "SEM-09", "SEM-10", "SEM-05"]
+  }
+]

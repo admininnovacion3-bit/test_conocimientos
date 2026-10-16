@@ -1,0 +1,51 @@
+{
+  "id_plantilla": "PL-OM-01",
+  "version": 1,
+  "tipo": "opcion_multiple",
+  "descripcion": "Pregunta conceptual con 4 opciones (A-D) y exactamente una correcta.",
+  "area": "programacion",
+  "tema": "ciclos",
+  "nivel": 1,
+  "nota_parametros": "area, tema y nivel son valores por defecto. En cada solicitud los FIJA el motor adaptativo (nunca la IA) reemplazando {{area}}, {{tema}} y {{nivel}} antes de enviar la plantilla a Gemini.",
+  "areas_permitidas": ["logica", "programacion", "bases_de_datos", "actitud"],
+  "estructura": {
+    "id_plantilla": "PL-OM-01",
+    "area": "{{area}}",
+    "tema": "{{tema}}",
+    "nivel": "{{nivel}}",
+    "tipo": "opcion_multiple",
+    "contenido": {
+      "enunciado": "___",
+      "opciones": { "A": "___", "B": "___", "C": "___", "D": "___" }
+    },
+    "respuesta_correcta": { "opcion": "___" },
+    "explicacion": "___"
+  },
+  "restricciones": {
+    "longitud": { "enunciado": [20, 400], "opcion": [1, 150], "explicacion": [20, 400] },
+    "num_opciones": 4,
+    "una_sola_correcta": true,
+    "tema_obligatorio": true,
+    "opciones_distintas": true,
+    "frases_prohibidas": ["todas las anteriores", "ninguna de las anteriores", "todas son correctas", "ninguna es correcta", "a y b", "b y c"],
+    "reglas_texto": [
+      "El enunciado debe tratar SOLO el tema indicado.",
+      "Los distractores deben ser plausibles (errores típicos), no absurdos.",
+      "Las 4 opciones deben tener longitud similar para no delatar la correcta.",
+      "Español neutro, sin nombres reales de personas ni empresas."
+    ]
+  },
+  "ejemplo_salida": {
+    "id_plantilla": "PL-OM-01",
+    "area": "programacion",
+    "tema": "ciclos",
+    "nivel": 1,
+    "tipo": "opcion_multiple",
+    "contenido": {
+      "enunciado": "¿Cuántas veces se ejecuta el cuerpo del ciclo for i in range(2, 8)?",
+      "opciones": { "A": "8 veces", "B": "6 veces", "C": "7 veces", "D": "5 veces" }
+    },
+    "respuesta_correcta": { "opcion": "B" },
+    "explicacion": "range(2, 8) genera 2, 3, 4, 5, 6 y 7: seis valores, porque el límite superior no se incluye."
+  }
+}

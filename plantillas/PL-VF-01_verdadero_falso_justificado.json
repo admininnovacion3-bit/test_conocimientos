@@ -1,0 +1,54 @@
+{
+  "id_plantilla": "PL-VF-01",
+  "version": 1,
+  "tipo": "verdadero_falso_justificado",
+  "descripcion": "Afirmación que el aspirante marca como verdadera o falsa y luego elige la justificación correcta entre 3. Solo cuenta como correcta si acierta AMBAS partes (evita acertar por azar: probabilidad 1/6 en vez de 1/2).",
+  "area": "bases_de_datos",
+  "tema": "claves",
+  "nivel": 2,
+  "nota_parametros": "area, tema y nivel los fija el motor adaptativo. La IA solo rellena los '___'. 'valor' debe ser booleano true/false, no texto.",
+  "areas_permitidas": ["logica", "programacion", "bases_de_datos", "actitud"],
+  "estructura": {
+    "id_plantilla": "PL-VF-01",
+    "area": "{{area}}",
+    "tema": "{{tema}}",
+    "nivel": "{{nivel}}",
+    "tipo": "verdadero_falso_justificado",
+    "contenido": {
+      "afirmacion": "___",
+      "opciones_justificacion": { "A": "___", "B": "___", "C": "___" }
+    },
+    "respuesta_correcta": { "valor": "___", "justificacion": "___" },
+    "explicacion": "___"
+  },
+  "restricciones": {
+    "longitud": { "afirmacion": [20, 300], "opcion": [10, 200], "explicacion": [20, 400] },
+    "num_opciones": 3,
+    "una_sola_correcta": true,
+    "tema_obligatorio": true,
+    "opciones_distintas": true,
+    "frases_prohibidas": ["todas las anteriores", "ninguna de las anteriores", "siempre y nunca"],
+    "reglas_texto": [
+      "La afirmación debe ser inequívocamente verdadera o falsa (sin 'a veces' ni 'depende').",
+      "Exactamente una justificación explica correctamente el valor de verdad.",
+      "Las otras dos justificaciones deben sonar técnicas pero contener un error conceptual."
+    ]
+  },
+  "ejemplo_salida": {
+    "id_plantilla": "PL-VF-01",
+    "area": "bases_de_datos",
+    "tema": "claves",
+    "nivel": 2,
+    "tipo": "verdadero_falso_justificado",
+    "contenido": {
+      "afirmacion": "Una tabla puede tener varias claves foráneas pero solo una clave primaria.",
+      "opciones_justificacion": {
+        "A": "Porque la clave primaria identifica de forma única cada fila y puede ser compuesta, mientras que cada clave foránea referencia a otra tabla.",
+        "B": "Porque las claves foráneas no pueden repetirse dentro de la misma tabla.",
+        "C": "Porque PostgreSQL limita a una sola clave de cualquier tipo por tabla."
+      }
+    },
+    "respuesta_correcta": { "valor": true, "justificacion": "A" },
+    "explicacion": "Solo existe una PRIMARY KEY (simple o compuesta) por tabla; las FOREIGN KEY pueden ser varias, una por cada relación."
+  }
+}

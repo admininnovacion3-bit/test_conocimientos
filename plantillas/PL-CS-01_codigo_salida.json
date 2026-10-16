@@ -1,0 +1,57 @@
+{
+  "id_plantilla": "PL-CS-01",
+  "version": 1,
+  "tipo": "codigo_salida",
+  "descripcion": "Se muestra un fragmento de código y el aspirante elige la salida exacta que produce.",
+  "area": "programacion",
+  "tema": "funciones",
+  "nivel": 2,
+  "nota_parametros": "area, tema y nivel los fija el motor adaptativo. La IA solo rellena los '___'.",
+  "areas_permitidas": ["logica", "programacion", "bases_de_datos"],
+  "estructura": {
+    "id_plantilla": "PL-CS-01",
+    "area": "{{area}}",
+    "tema": "{{tema}}",
+    "nivel": "{{nivel}}",
+    "tipo": "codigo_salida",
+    "contenido": {
+      "enunciado": "___",
+      "lenguaje": "___",
+      "codigo": "___",
+      "opciones": { "A": "___", "B": "___", "C": "___", "D": "___" }
+    },
+    "respuesta_correcta": { "opcion": "___" },
+    "explicacion": "___"
+  },
+  "restricciones": {
+    "longitud": { "enunciado": [20, 300], "codigo": [10, 600], "opcion": [1, 120], "explicacion": [20, 400] },
+    "lenguajes_permitidos": ["python", "pseudocodigo", "sql"],
+    "lineas_codigo_por_nivel": { "1": [1, 6], "2": [2, 12], "3": [3, 20] },
+    "num_opciones": 4,
+    "una_sola_correcta": true,
+    "tema_obligatorio": true,
+    "opciones_distintas": true,
+    "frases_prohibidas": ["todas las anteriores", "ninguna de las anteriores", "error de compilacion"],
+    "reglas_texto": [
+      "El código debe ser determinista: sin random, sin input(), sin fecha/hora, sin red ni archivos.",
+      "La salida correcta debe ser exactamente lo que imprime el código (respetar saltos de línea con \\n).",
+      "Si lenguaje es sql, el enunciado debe incluir los datos de la tabla.",
+      "Los distractores deben corresponder a errores típicos (off-by-one, precedencia, mutabilidad)."
+    ]
+  },
+  "ejemplo_salida": {
+    "id_plantilla": "PL-CS-01",
+    "area": "programacion",
+    "tema": "funciones",
+    "nivel": 2,
+    "tipo": "codigo_salida",
+    "contenido": {
+      "enunciado": "¿Qué imprime el siguiente código en Python?",
+      "lenguaje": "python",
+      "codigo": "def duplicar(x):\n    return x * 2\n\nprint(duplicar('ab') + str(duplicar(3)))",
+      "opciones": { "A": "abab6", "B": "ab26", "C": "Error de tipos", "D": "abab33" }
+    },
+    "respuesta_correcta": { "opcion": "A" },
+    "explicacion": "duplicar('ab') repite la cadena ('abab') y duplicar(3) retorna 6; str(6) se concatena: 'abab6'."
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "id_plantilla": "PL-CP-01",
+  "version": 1,
+  "tipo": "caso_practico",
+  "descripcion": "Situación realista del área de innovación; el aspirante elige la mejor acción entre 4.",
+  "area": "actitud",
+  "tema": "comunicacion",
+  "nivel": 2,
+  "nota_parametros": "area, tema y nivel los fija el motor adaptativo. En actitud no hay 'respuesta de libro': la correcta es la que refleja la competencia esperada por la institución (documentada en la explicación).",
+  "areas_permitidas": ["actitud", "programacion", "bases_de_datos"],
+  "estructura": {
+    "id_plantilla": "PL-CP-01",
+    "area": "{{area}}",
+    "tema": "{{tema}}",
+    "nivel": "{{nivel}}",
+    "tipo": "caso_practico",
+    "contenido": {
+      "contexto": "___",
+      "enunciado": "___",
+      "opciones": { "A": "___", "B": "___", "C": "___", "D": "___" }
+    },
+    "respuesta_correcta": { "opcion": "___" },
+    "explicacion": "___"
+  },
+  "restricciones": {
+    "longitud": { "contexto": [60, 600], "enunciado": [15, 200], "opcion": [10, 200], "explicacion": [20, 400] },
+    "num_opciones": 4,
+    "una_sola_correcta": true,
+    "tema_obligatorio": true,
+    "opciones_distintas": true,
+    "frases_prohibidas": ["todas las anteriores", "ninguna de las anteriores", "depende de la situacion"],
+    "reglas_texto": [
+      "El contexto debe ocurrir en un equipo de desarrollo o soporte de una institución universitaria.",
+      "Sin nombres reales; usar roles (el líder del proyecto, un compañero, el usuario).",
+      "Ninguna opción debe ser obviamente grosera o ilegal; los distractores deben ser tentadores.",
+      "La opción correcta es la más profesional, proactiva y responsable."
+    ]
+  },
+  "ejemplo_salida": {
+    "id_plantilla": "PL-CP-01",
+    "area": "actitud",
+    "tema": "comunicacion",
+    "nivel": 2,
+    "tipo": "caso_practico",
+    "contenido": {
+      "contexto": "Usted lleva dos semanas en la práctica. El jefe del área le asignó un módulo que debe entregar el viernes. El miércoles descubre que depende de un servicio que otro equipo aún no termina.",
+      "enunciado": "¿Qué es lo más adecuado hacer?",
+      "opciones": {
+        "A": "Esperar al viernes y explicar en la entrega por qué no se pudo terminar.",
+        "B": "Informar hoy al jefe el bloqueo, proponer avanzar con datos simulados y acordar una nueva fecha.",
+        "C": "Reescribir por su cuenta el servicio del otro equipo para no depender de nadie.",
+        "D": "Pedirle a un compañero que termine el servicio sin avisar al jefe."
+      }
+    },
+    "respuesta_correcta": { "opcion": "B" },
+    "explicacion": "Comunicar el riesgo a tiempo, proponer una alternativa (mock) y renegociar el plazo es la conducta profesional esperada."
+  }
+}

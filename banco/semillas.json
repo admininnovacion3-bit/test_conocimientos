@@ -1,0 +1,292 @@
+[
+  {
+    "codigo": "SEM-01",
+    "id_plantilla": "PL-OM-01",
+    "area": "logica",
+    "tema": "secuencias_patrones",
+    "nivel": 1,
+    "tipo": "opcion_multiple",
+    "proposito": "Calentamiento. Mide razonamiento inductivo básico (detectar un patrón) sin depender de un lenguaje.",
+    "contenido": {
+      "enunciado": "¿Cuál es el siguiente término de la secuencia 3, 6, 11, 18, 27, ...?",
+      "opciones": {
+        "A": "36",
+        "B": "38",
+        "C": "39",
+        "D": "35"
+      }
+    },
+    "respuesta_correcta": {
+      "opcion": "B"
+    },
+    "explicacion": "Las diferencias son 3, 5, 7, 9 (impares consecutivos); la siguiente es 11, así que 27 + 11 = 38.",
+    "rasgos_opciones": {
+      "A": "patron_superficial",
+      "B": "analitico",
+      "C": "patron_superficial",
+      "D": "impulsivo"
+    }
+  },
+  {
+    "codigo": "SEM-02",
+    "id_plantilla": "PL-CS-01",
+    "area": "programacion",
+    "tema": "ciclos",
+    "nivel": 2,
+    "tipo": "codigo_salida",
+    "proposito": "Traza mental de un ciclo con condicional y acumulador: la habilidad base de cualquier practicante de software.",
+    "contenido": {
+      "enunciado": "¿Qué imprime el siguiente código en Python?",
+      "lenguaje": "python",
+      "codigo": "total = 0\nfor i in range(1, 6):\n    if i % 2 == 0:\n        continue\n    total += i\nprint(total)",
+      "opciones": {
+        "A": "15",
+        "B": "6",
+        "C": "9",
+        "D": "4"
+      }
+    },
+    "respuesta_correcta": {
+      "opcion": "C"
+    },
+    "explicacion": "continue salta los pares (2 y 4); se suman 1 + 3 + 5 = 9.",
+    "rasgos_opciones": {
+      "A": "lectura_superficial",
+      "B": "confusion_continue",
+      "C": "analitico",
+      "D": "confusion_continue"
+    }
+  },
+  {
+    "codigo": "SEM-03",
+    "id_plantilla": "PL-CC-01",
+    "area": "bases_de_datos",
+    "tema": "sql_agregacion",
+    "nivel": 2,
+    "tipo": "completar_codigo",
+    "proposito": "Distinguir WHERE de HAVING: separa a quien memorizó SQL de quien entiende el orden de evaluación.",
+    "contenido": {
+      "enunciado": "Complete la consulta para mostrar las ciudades que tienen MÁS de 10 estudiantes registrados.",
+      "lenguaje": "sql",
+      "codigo": "SELECT ciudad, COUNT(*) AS cantidad\nFROM estudiantes\nGROUP BY ciudad\n[[HUECO]];",
+      "opciones": {
+        "A": "WHERE COUNT(*) > 10",
+        "B": "HAVING COUNT(*) > 10",
+        "C": "WHERE cantidad > 10",
+        "D": "ORDER BY COUNT(*) > 10"
+      }
+    },
+    "respuesta_correcta": {
+      "opcion": "B"
+    },
+    "explicacion": "Las condiciones sobre agregados se filtran con HAVING, que se evalúa después de GROUP BY; WHERE filtra filas antes de agrupar.",
+    "rasgos_opciones": {
+      "A": "memoristico",
+      "B": "analitico",
+      "C": "memoristico",
+      "D": "intuitivo"
+    }
+  },
+  {
+    "codigo": "SEM-04",
+    "id_plantilla": "PL-VF-01",
+    "area": "programacion",
+    "tema": "recursion",
+    "nivel": 3,
+    "tipo": "verdadero_falso_justificado",
+    "proposito": "Pregunta difícil: abstracción y justificación. Solo los aspirantes de nivel alto aciertan ambas partes.",
+    "contenido": {
+      "afirmacion": "Una función recursiva que no tiene caso base termina igual cuando el valor del parámetro llega a cero.",
+      "opciones_justificacion": {
+        "A": "Falso: sin caso base nada detiene las llamadas; en Python se agota la pila y se lanza RecursionError.",
+        "B": "Verdadero: el intérprete detecta el cero y detiene automáticamente la recursión.",
+        "C": "Falso: la función termina, pero siempre retorna None en lugar del resultado."
+      }
+    },
+    "respuesta_correcta": {
+      "valor": false,
+      "justificacion": "A"
+    },
+    "explicacion": "El caso base es la única condición de parada de una recursión; sin él las llamadas continúan hasta exceder el límite de recursión.",
+    "rasgos_opciones": {
+      "A": "analitico",
+      "B": "intuitivo",
+      "C": "parcial"
+    }
+  },
+  {
+    "codigo": "SEM-05",
+    "id_plantilla": "PL-CP-01",
+    "area": "actitud",
+    "tema": "aprendizaje_autonomo",
+    "nivel": 2,
+    "tipo": "caso_practico",
+    "proposito": "Actitud ante lo desconocido: el rasgo más predictivo del éxito en una práctica de innovación.",
+    "contenido": {
+      "contexto": "En su primera semana de práctica le piden integrar una API de un servicio que nunca ha usado y que el equipo tampoco conoce. La entrega es en cinco días.",
+      "enunciado": "¿Cuál es la mejor forma de empezar?",
+      "opciones": {
+        "A": "Decir que no conoce esa tecnología y pedir que la asignen a otra persona.",
+        "B": "Leer la documentación oficial, hacer una prueba mínima y compartir con el equipo lo aprendido y las dudas.",
+        "C": "Copiar el primer ejemplo que encuentre en internet y ajustarlo hasta que funcione, sin revisar la documentación.",
+        "D": "Esperar a que el líder le explique paso a paso cómo hacerlo."
+      }
+    },
+    "respuesta_correcta": {
+      "opcion": "B"
+    },
+    "explicacion": "Investigar en fuentes oficiales, validar con una prueba pequeña y comunicar avances refleja aprendizaje autónomo y trabajo en equipo.",
+    "rasgos_opciones": {
+      "A": "evitativo",
+      "B": "proactivo",
+      "C": "ensayo_error",
+      "D": "dependiente"
+    }
+  },
+  {
+    "codigo": "SEM-06",
+    "id_plantilla": "PL-OM-01",
+    "area": "logica",
+    "tema": "logica_proposicional",
+    "nivel": 1,
+    "tipo": "opcion_multiple",
+    "proposito": "Lógica formal básica: la base de las condiciones en cualquier lenguaje.",
+    "contenido": {
+      "enunciado": "Si la proposición p es falsa, ¿cuál es el valor de verdad de la implicación p → q, sin importar el valor de q?",
+      "opciones": {
+        "A": "Verdadero",
+        "B": "Falso",
+        "C": "Depende del valor de q",
+        "D": "No está definido"
+      }
+    },
+    "respuesta_correcta": {
+      "opcion": "A"
+    },
+    "explicacion": "Una implicación solo es falsa cuando el antecedente es verdadero y el consecuente falso; con antecedente falso siempre es verdadera.",
+    "rasgos_opciones": {
+      "A": "analitico",
+      "B": "intuitivo",
+      "C": "parcial",
+      "D": "impulsivo"
+    }
+  },
+  {
+    "codigo": "SEM-07",
+    "id_plantilla": "PL-CS-01",
+    "area": "programacion",
+    "tema": "poo",
+    "nivel": 2,
+    "tipo": "codigo_salida",
+    "proposito": "Herencia y sobrescritura: concepto central para quien estudia ingeniería de software.",
+    "contenido": {
+      "enunciado": "¿Qué imprime el siguiente código con clases en Python?",
+      "lenguaje": "python",
+      "codigo": "class Animal:\n    def sonido(self):\n        return \"...\"\n\nclass Perro(Animal):\n    def sonido(self):\n        return \"Guau\"\n\nmascotas = [Animal(), Perro()]\nprint(\" \".join(m.sonido() for m in mascotas))",
+      "opciones": {
+        "A": "... Guau",
+        "B": "Guau Guau",
+        "C": "... ...",
+        "D": "Error"
+      }
+    },
+    "respuesta_correcta": {
+      "opcion": "A"
+    },
+    "explicacion": "Cada objeto usa su propio método: Animal retorna '...' y Perro sobrescribe sonido() para retornar 'Guau'.",
+    "rasgos_opciones": {
+      "A": "analitico",
+      "B": "confusion_herencia",
+      "C": "confusion_herencia",
+      "D": "memoristico"
+    }
+  },
+  {
+    "codigo": "SEM-08",
+    "id_plantilla": "PL-CS-01",
+    "area": "programacion",
+    "tema": "condicionales",
+    "nivel": 1,
+    "tipo": "codigo_salida",
+    "proposito": "Lectura de una condición simple: mínimo esperado para cualquier aspirante.",
+    "contenido": {
+      "enunciado": "¿Qué imprime el siguiente código?",
+      "lenguaje": "python",
+      "codigo": "edad = 17\nif edad >= 18:\n    print(\"Mayor\")\nelse:\n    print(\"Menor\")",
+      "opciones": {
+        "A": "Mayor",
+        "B": "Menor",
+        "C": "Mayor Menor",
+        "D": "No imprime nada"
+      }
+    },
+    "respuesta_correcta": {
+      "opcion": "B"
+    },
+    "explicacion": "17 >= 18 es falso, así que se ejecuta solo el bloque else.",
+    "rasgos_opciones": {
+      "A": "impulsivo",
+      "B": "analitico",
+      "C": "lectura_superficial",
+      "D": "lectura_superficial"
+    }
+  },
+  {
+    "codigo": "SEM-09",
+    "id_plantilla": "PL-CC-01",
+    "area": "bases_de_datos",
+    "tema": "sql_select",
+    "nivel": 1,
+    "tipo": "completar_codigo",
+    "proposito": "SQL mínimo: consultar todas las columnas de una tabla.",
+    "contenido": {
+      "enunciado": "Complete la consulta para obtener todas las columnas de la tabla estudiantes.",
+      "lenguaje": "sql",
+      "codigo": "SELECT [[HUECO]]\nFROM estudiantes;",
+      "opciones": {
+        "A": "*",
+        "B": "ALL",
+        "C": "TODO",
+        "D": "%"
+      }
+    },
+    "respuesta_correcta": {
+      "opcion": "A"
+    },
+    "explicacion": "El asterisco (*) en SELECT indica todas las columnas; % es un comodín de LIKE y ALL/TODO no aplican aquí.",
+    "rasgos_opciones": {
+      "A": "analitico",
+      "B": "intuitivo",
+      "C": "impulsivo",
+      "D": "confusion_conceptos"
+    }
+  },
+  {
+    "codigo": "SEM-10",
+    "id_plantilla": "PL-OM-01",
+    "area": "logica",
+    "tema": "razonamiento_deductivo",
+    "nivel": 2,
+    "tipo": "opcion_multiple",
+    "proposito": "Deducción (modus tollens) en un contexto cotidiano, sin requerir programación.",
+    "contenido": {
+      "enunciado": "Premisas: (1) Todos los aspirantes que aprueban la prueba pasan a entrevista. (2) Un aspirante no pasó a entrevista. ¿Qué se puede concluir de ese aspirante?",
+      "opciones": {
+        "A": "Que no aprobó la prueba",
+        "B": "Que aprobó, pero no se presentó",
+        "C": "Que no se puede concluir nada",
+        "D": "Que sí aprobó la prueba"
+      }
+    },
+    "respuesta_correcta": {
+      "opcion": "A"
+    },
+    "explicacion": "Si aprobar implica pasar a entrevista y no pasó, entonces no aprobó (modus tollens).",
+    "rasgos_opciones": {
+      "A": "analitico",
+      "B": "intuitivo",
+      "C": "parcial",
+      "D": "impulsivo"
+    }
+  }
+]
